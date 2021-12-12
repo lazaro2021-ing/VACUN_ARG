@@ -84,8 +84,8 @@ namespace VACUN_ARG2.Center
 
         public bool setMacAddress(int id_center,string mac)
         {
-            string query = $"UPDATE {this.db_table} SET macAddress='{mac}' WHERE id='{id_center}' ;";
-            bool status=this.connect.Update(query);
+            string query = $"INSERT INTO mac_centers (mac,id_center) VALUES ('{mac}','{id_center}') ;";
+            bool status=this.connect.Insert(query);
             return status;
         }
 
@@ -100,10 +100,10 @@ namespace VACUN_ARG2.Center
 
         public int getIdByMacAddress(string mac)
         {
-            string query = $"SELECT id FROM {this.db_table} WHERE macAddress='{mac}' ;";
+            string query = $"SELECT id_center FROM mac_centers WHERE mac='{mac}' ;";
             DataTable result = this.connect.Select(query);
             if (result.Rows.Count>0) {
-                return Convert.ToInt32(result.Rows[0]["id"]);
+                return Convert.ToInt32(result.Rows[0]["id_center"]);
             }
             else
             {

@@ -15,9 +15,12 @@ namespace VACUN_ARG2.Statistics
     {
         private DateTime from_fecha;
         private DateTime to_fecha;
+        private int[,] colors = new int[10,3] {{255,0,0},{0,255,0},{0,0,255},{255,0,255}, {170,234,255},
+                                                {126,189,141},{189,46,0},{255,255,0},{0,255,255},{141,0,189},};
         public StatisticsForm()
         {
             InitializeComponent();
+            
             
         }
 
@@ -30,7 +33,7 @@ namespace VACUN_ARG2.Statistics
             int index = 0;
             int cantidad_dosis_aplicadas =0;
             Dictionary<int, int> count_vaccine = new Dictionary<int, int>();
-
+            Dictionary<int, int> count_vaccine_sort = new Dictionary<int, int>();
 
             foreach (PeopleVaccine row in vaccine_aplicadas)
             {
@@ -48,18 +51,28 @@ namespace VACUN_ARG2.Statistics
                     cantidad_dosis_aplicadas++;
                 }
             }
-
+            count_vaccine = count_vaccine.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
             int angle_prev = 0;
-            foreach (var row in count_vaccine)
+            int cant_vac = 0;
+            if (count_vaccine.Count < 10)
             {
-                
-                SolidBrush color = new SolidBrush(Color.FromArgb(255, 255, 255 * index / count_vaccine.Count, 255 * index / count_vaccine.Count));
+                cant_vac = count_vaccine.Count;
+            }
+            else
+            {
+                cant_vac = 10;
+            }
+            
+            for ( index = 0; index < cant_vac; index++)
+            {
+                var row = count_vaccine.ElementAt(index);
+                SolidBrush color = new SolidBrush(Color.FromArgb(255,colors[index, 0], colors[index, 1], colors[index, 2]));
                 plot.FillPie(color, 10, 10, 350, 350, angle_prev, 360 * count_vaccine[row.Key] / cantidad_dosis_aplicadas);
                 angle_prev += 360 * count_vaccine[row.Key] / cantidad_dosis_aplicadas;
                 plot.FillRectangle(color, 450, 10+index*35,30, 20);
                 vaccine.getVaccineById(row.Key);
                 plot.DrawString($"{vaccine.Name} (Dosis:{count_vaccine[row.Key]}-{100*count_vaccine[row.Key] / cantidad_dosis_aplicadas}%)", new Font("Arial", 12), new SolidBrush(Color.Black), 480, 10+index * 35);
-                index++;
+                
             }
             if(cantidad_dosis_aplicadas>0)
             {
