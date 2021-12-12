@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Center\AddCentroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Center\ViewAvailableVaccineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Center\ViewCentroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Configuracion\ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Statistics\StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vaccine\AddVaccineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vaccine\AssignVaccineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vaccine\AvailableVaccineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vaccine\CreateVaccineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vacunar\PeopleDosisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vacunar\PeopleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vacunar\VacunarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
