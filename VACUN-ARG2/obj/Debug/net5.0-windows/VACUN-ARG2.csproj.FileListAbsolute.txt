@@ -40,4 +40,3 @@ C:\Users\lazar\source\repos\VACUN-ARG2\VACUN-ARG2\obj\Debug\net5.0-windows\VACUN
 C:\Users\lazar\source\repos\VACUN-ARG2\VACUN-ARG2\obj\Debug\net5.0-windows\ref\VACUN-ARG2.dll
 C:\Users\lazar\source\repos\VACUN-ARG2\VACUN-ARG2\obj\Debug\net5.0-windows\VACUN-ARG2.pdb
 C:\Users\lazar\source\repos\VACUN-ARG2\VACUN-ARG2\obj\Debug\net5.0-windows\VACUN-ARG2.genruntimeconfig.cache
-C:\Users\lazar\source\repos\VACUN-ARG2\VACUN-ARG2\obj\Debug\net5.0-windows\VACUN-ARG2.csproj.AssemblyReference.cache

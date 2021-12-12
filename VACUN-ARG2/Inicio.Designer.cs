@@ -88,7 +88,7 @@
             this.label_centro.Name = "label_centro";
             this.label_centro.Size = new System.Drawing.Size(231, 24);
             this.label_centro.TabIndex = 10;
-            this.label_centro.Text = "Centro de Vacunacion: ";
+            this.label_centro.Text = "Centro de Vacunación: ";
             this.label_centro.UseWaitCursor = true;
             // 
             // panel1

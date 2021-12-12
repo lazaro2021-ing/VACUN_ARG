@@ -18,7 +18,6 @@ namespace VACUN_ARG2.Center
         private string departamento;
         private string localidad;
         private string provincia;
-        private List<int> id_vaccine;
         private DBConnect connect = new DBConnect();
         private string db_table="centers";
         private int dosis_aplicadas = 0;

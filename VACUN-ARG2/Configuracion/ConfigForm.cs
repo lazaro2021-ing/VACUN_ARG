@@ -43,7 +43,7 @@ namespace VACUN_ARG2
             CenterVaccine center = new CenterVaccine();
             bool result=center.setMacAddress(this.list_center[this.index_center].Id, this.mac_address.Text);
             if (result) { 
-                MessageBox.Show("Configuración exitosa.");
+                MessageBox.Show("Configuración exitosa.Reinicie la aplicación.");
             }else
             {
                MessageBox.Show("Error de configuración.");
