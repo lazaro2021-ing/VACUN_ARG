@@ -32,7 +32,7 @@ namespace VACUN_ARG2.Vacunar
 
 
             }
-            //para que las columnas se ajusten al contenido
+            //para que las columnas se ajusten al contenido 1
             this.dosis_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
